@@ -1,0 +1,77 @@
+
+//custom palette
+$royal-purple-palette: (
+  50: #f8f0fc,
+  100: #f3d9fa,
+  200: #eebefa,
+  300: #e599f7,
+  400: #da77f2,
+  500: #cc5de8,
+  600: #be4bdb,
+  700: #ae3ec9,
+  800: #9c36b5,
+  900: #862e9c,
+
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: black,
+    600: black,
+    700: white,
+    800: white,
+    900: white
+  )
+);
+
+$gold-palette: (
+  50: #fff9e6,
+  100: #fff3cf,
+  200: #ffe699,
+  300: #ffd966,
+  400: #ffc93b,
+  500: #ffb919,
+  600: #faad05,
+  700: #f59f00,
+
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: black,
+    600: black,
+    700: white,
+    800: white,
+    900: white
+  )
+);
+
+$royal-golden-palette: (
+  50: #fff9db,
+  100: #fff3bf,
+  200: #ffec99,
+  300: #ffe066,
+  400: #ffd43b,
+  500: #fcc419,
+  600: #fab005,
+  700: #f59f00,
+  800: #f08c00,
+  900: #e67700,
+
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: black,
+    600: black,
+    700: white,
+    800: white,
+    900: white
+  )
+)

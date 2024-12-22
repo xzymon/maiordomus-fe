@@ -1,0 +1,12 @@
+<mat-sidenav-container>
+	<mat-sidenav #sidenav mode="side" opened>
+		<mat-nav-list>
+			<nav-sidebar-item *ngFor="let item of menu" [item]="item"></nav-sidebar-item>
+		</mat-nav-list>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<div class="outlet-container">
+			<router-outlet></router-outlet>
+		</div>
+	</mat-sidenav-content>
+</mat-sidenav-container>
