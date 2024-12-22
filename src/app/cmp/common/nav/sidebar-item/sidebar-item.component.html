@@ -1,0 +1,23 @@
+<div *ngIf="item.active">
+	<mat-list-item [ngStyle]="{'padding-left': (depth * 20) + 'px', 'padding-right': '10px'}" (click)="onItemSelected(item)" [disabled]="item.disabled"
+	               [ngClass]="{'active': item.route ? router.isActive(item.route, true) && !item.disabled: false, 'expanded': expanded, 'disabled': item.disabled}"
+		class="menu-list-item" *ngIf="!item.divider">
+		<div class="menu-list-wrapper" [ngClass]="{'active': item.route ? router.isActive(item.route, true) && !item.disabled: false, 'expanded': expanded, 'disabled': item.disabled}">
+			<div class="icon_and_text">
+				@if (item.iconName) {
+				<span class="material-icons routeIcon">{{item.iconName}}</span>
+				}
+				@if (item.iconPath) {
+					<img [ngSrc]="item.iconPath" alt="logo" class="bar-icon routeIcon">
+				}
+				<span class="menu-list-item-text">{{item.displayName}}</span>
+			</div>
+			<span *ngIf="item.children && item.children.length">
+				<span class="material-icons" [@indicatorRotate]="expanded ? 'expanded' : 'collapsed'">expand_more</span>
+			</span>
+		</div>
+	</mat-list-item>
+	<div *ngIf="expanded">
+		<nav-sidebar-item *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></nav-sidebar-item>
+	</div>
+</div>

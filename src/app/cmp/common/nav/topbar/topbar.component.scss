@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "assets/styles/variables" as *;
+
+.navbar {
+  height: 100px;
+  &-content {
+
+    &-logo {
+
+    }
+    &-brand {
+    }
+    &_icon {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.spacer {
+  width: 20px;
+}
+
+button {
+  border-style: none !important;
+}
