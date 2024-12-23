@@ -26,7 +26,11 @@
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "~0.15.0",
+    "date-fns": "^4.1.0",
+    "date-fns-jalali": "^4.1.0-0",
+    "ngx-date-fns": "^11.0.0",
+    "ngx-mask-2": "^6.5.23"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.0.4",
