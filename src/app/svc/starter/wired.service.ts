@@ -28,4 +28,24 @@ export class WiredService {
         .catch(error => observer.error(error));
     });
   }
+
+  public postDummyData(message: string): Observable<boolean> {
+    return new Observable<boolean>((observer) => {
+      fetch('http://localhost:8080/api/v1/dummy/post', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({message})
+      })
+        .then(response => {
+			if (response.status === 201) {
+				observer.next(true);
+			} else {
+				observer.next(false);
+			}
+			observer.complete();
+		})
+    })
+  }
 }

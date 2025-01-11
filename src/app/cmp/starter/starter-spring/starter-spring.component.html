@@ -1,6 +1,8 @@
 <p>starter-spring works!</p>
 <p>I'm {{valueFromService}}</p>
 
+<starter-spring-new (onNewValue)="postDummyData($event)"></starter-spring-new>
+
 <table mat-table [dataSource]="dataSource">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> # </th>

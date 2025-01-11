@@ -3,13 +3,15 @@ import {WiredService} from '../../../svc/starter/wired.service';
 import {DummyMessageModel} from '../../../model/dummy-message.model';
 import {filter, mergeMap, tap} from 'rxjs';
 import {MatTable, MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {StarterSpringNewComponent} from './starter-spring-new/starter-spring-new.component';
 
 @Component({
   standalone: true,
   selector: 'app-starter-spring',
-  imports: [
-    MatTableModule
-  ],
+	imports: [
+		MatTableModule,
+		StarterSpringNewComponent
+	],
   templateUrl: './starter-spring.component.html',
   styleUrl: './starter-spring.component.scss'
 })
@@ -96,5 +98,17 @@ export class StarterSpringComponent implements OnInit{
         console.info('Completed filtered element subscription');
       }
     });
+  }
+
+  public postDummyData( message: string) {
+	  console.log(message);
+	  this.wiredService.postDummyData(message).subscribe(
+		  response => {
+			  console.log(response);
+			  if (response) {
+				  this.getDummyData();
+			  }
+		  }
+	  );
   }
 }

@@ -13,10 +13,16 @@ export interface MenuItem {
 }
 
  export let navSidebarMenu: MenuItem[] = [
-	 {
-		 displayName: 'Starter Spring',
-		 iconName: 'rocket',
-		 route: 'starter-spring',
-		 active: true
-	 }
+	{
+		displayName: 'Starter Spring',
+		iconName: 'rocket',
+		route: 'starter-spring',
+		active: true
+	},
+	{
+		displayName: 'Quarterly Candles',
+		iconName: 'rocket',
+		route: 'quarterly-candles-tab',
+		active: true
+	}
  ];
