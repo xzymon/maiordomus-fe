@@ -20,9 +20,9 @@ export interface MenuItem {
 		active: true
 	},
 	{
-		displayName: 'Quarterly Candles',
-		iconName: 'rocket',
-		route: 'quarterly-candles-tab',
+		displayName: 'Candles',
+		iconName: 'candlestick_chart',
+		route: 'candles',
 		active: true
 	}
  ];
